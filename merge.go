@@ -114,7 +114,6 @@ func deepMerge(dst, src reflect.Value, visited map[uintptr]*visit, depth int, co
 						dstSlice = reflect.ValueOf(dstElement.Interface())
 					}
 
-					dstSlice = reflect.AppendSlice(dstSlice, srcSlice)
 					dst.SetMapIndex(key, dstSlice)
 				}
 			}
